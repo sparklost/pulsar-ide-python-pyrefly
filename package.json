@@ -1,0 +1,90 @@
+{
+  "name": "pulsar-ide-python-pyrefly",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "High-performance Python Language Server",
+  "repository": "https://github.com/sparklost/pulsar-ide-python-pyrefly",
+  "license": "MIT",
+  "bugs": "https://github.com/sparklost/pulsar-ide-python-pyrefly",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "keywords": [
+    "ide",
+    "python"
+  ],
+  "dependencies": {
+    "@savetheclocktower/atom-languageclient": "^1.17.11"
+  },
+  "activationHooks": [
+    "core:loaded-shell-environment"
+  ],
+  "consumedServices": {
+    "atom-ide-busy-signal": {
+      "versions": {
+        "0.1.0": "consumeBusySignal"
+      }
+    },
+    "datatip": {
+      "versions": {
+        "0.1.0": "consumeDatatip"
+      }
+    },
+    "signature-help": {
+      "versions": {
+        "0.1.0": "consumeSignatureHelp"
+      }
+    }
+  },
+  "enhancedScopes": [
+    "source.python"
+  ],
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "4.0.0": "provideAutocomplete"
+      }
+    },
+    "code-highlight": {
+      "versions": {
+        "0.1.0": "provideCodeHighlight"
+      }
+    },
+    "code-format.range": {
+      "versions": {
+        "0.1.0": "provideCodeFormat"
+      }
+    },
+    "definitions": {
+      "versions": {
+        "0.1.0": "provideDefinitions"
+      }
+    },
+    "find-references": {
+      "versions": {
+        "0.1.0": "provideFindReferences"
+      }
+    },
+    "intentions:list": {
+      "versions": {
+        "1.0.0": "provideIntentionsList"
+      }
+    },
+    "outline-view": {
+      "versions": {
+        "0.1.0": "provideOutlines"
+      }
+    },
+    "refactor": {
+      "versions": {
+        "0.1.0": "provideRefactor",
+        "0.2.0": "provideRefactorWithPrepare"
+      }
+    },
+    "symbol.provider": {
+      "versions": {
+        "1.0.0": "provideSymbols"
+      }
+    }
+  }
+}
